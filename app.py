@@ -29,7 +29,7 @@ def generate_reminder(event):
     response = openai_client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "你是一個有助於生成友善提醒的AI助手。"},
+            {"role": "system", "content": "你是一個有助於生成友善提醒的AI助手。提醒建議的內容除了中文建議外，同時空一行用英文說明"},
             {"role": "user", "content": prompt}
         ]
     )
